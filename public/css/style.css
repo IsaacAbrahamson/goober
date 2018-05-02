@@ -1,0 +1,563 @@
+
+/*=============================================
+=                 CSS RESET                   =
+=============================================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 10px;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+
+
+
+/*=============================================
+=                   STYLES                    =
+=============================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,500,800');
+
+html, body {
+  background: #F4C367;
+  min-height: 100%;
+}
+
+.intro {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.intro .container-fluid {
+  min-height: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.intro-text {
+  width: 100%;
+  max-width: 420px;
+  background: #f3d6a6;
+  border-top: 8px solid #debd87 !important;
+  padding: 20px;
+}
+
+.intro-ride {
+  display: flex;
+  align-items: center;
+}
+
+.intro-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-ride .img-container {
+  width: 80px;
+  display: block;
+  margin-right: 20px;
+}
+
+.bg-line {
+  display: table;
+  margin: 20px 0;
+}
+
+.bg-line small {
+  color: #815835;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.bg-line:after, .bg-line:before {
+  border-top: 1px solid #debd87;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 5px;
+  width: 50%;
+}
+
+
+input, select {
+  border-top: 1px solid #E5E5E4;
+  border-left: 1px solid #E5E5E4;
+  border-right: 1px solid #E5E5E4;
+  border-bottom: 2px solid transparent;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 52px;
+  padding: 10px;
+  border-radius: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  color: #815835;
+  background: white;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #815835;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #815835;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #815835;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #815835;
+}
+
+input:focus, select:focus {
+  outline: none;
+  box-shadow: -3px 0 0 #f58560;
+}
+
+form input:last-of-type {
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  width: 100%;
+  color: #815835;
+  margin-bottom: 10px;
+}
+
+button.btn-block {
+  border: none;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 52px;
+  padding: 10px;
+  border-radius: 0;
+  margin: 0;
+  background: #debd87;
+  transition: background 200ms;
+  cursor: pointer;
+  color: #815835;
+}
+
+button.btn-block:hover, button.btn-block:active, button.btn-block:focus {
+  outline: none;
+  background: #f9a97b;
+}
+
+
+
+
+h1, p, .logo {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 44px;
+}
+
+h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+p, button#ride {
+  font-weight: 200;
+  font-size: 35px;
+  color: #6e513b;
+}
+
+p#getride {
+  margin-bottom: 15px;
+}
+
+.logo {
+ position: relative;
+ width: 80%;
+ top: 40px;
+ left: 40px;
+ font-size: 26px;
+ font-weight: 800;
+ z-index: 1000;
+}
+
+button#ride {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #b2af36;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: color 400ms;
+}
+
+button#ride:focus, button#ride:hover  {
+  outline: none;
+  color: #f9a97b;
+}
+
+button#ride > svg {
+  position: relative;
+  transition: left 200ms;
+  left: 6px;
+}
+
+button#ride:focus > svg, button#ride:hover > svg {
+  outline: none;
+  left: 12px;
+}
+
+@media (max-width: 767px) {
+  .row {
+    flex-direction: column-reverse;
+  }  
+  .intro, .intro .container-fluid {
+    display: block;
+  }
+}
+
+#copyright, #copyright a, #copyright a:link, #copyright a:hover, #copyright a:active, #copyright a:focus {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #f3d6a6;
+  text-decoration: none;
+}
+
+#copyright {
+  height: 5%;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+}
+
+
+
+
+
+/*=============================================
+=                Loading Page                 =
+=============================================*/
+.loading {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading h4 {
+  font-weight: 200;
+  font-size: 35px;
+  color: #6e513b;
+  margin-bottom: 20px;
+}
+
+.loading-container {
+  text-align: center;
+}
+
+
+
+
+
+/*=============================================
+=            MAP            =
+=============================================*/
+.page-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-container {  
+  width: 100%;
+  height: 100%;
+  transition: all 300ms;
+}
+
+.profile {  
+  width: 90%;
+  height: 90%;
+  max-width: 500px;
+  max-height: 500px;
+  background: #f3d6a6;
+  border-top: 8px solid #debd87 !important;
+  padding: 20px;
+  transition: all 300ms;
+  display: flex;
+}
+
+.page-map h4 {
+  font-weight: 200;
+  font-size: 35px;
+  color: #6e513b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.driver-container {
+  display: none;
+}
+
+.driver-container p {
+  margin-bottom: 20px;
+}
+
+
+/*----------  Driver view styles  ----------*/
+.map-container.driver-view {  
+  width: 45%;
+}
+
+.profile.driver-view {  
+  width: 90%;
+  height: 90%;
+  max-width: 900px;
+  max-height: 300px;
+  background: #f3d6a6;
+  border-top: 8px solid #debd87 !important;
+  padding: 20px;
+}
+
+.driver-container.driver-view {
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin-left: 5%;
+}
+
+#title.driver-view {
+  cursor: pointer;
+}
+
+
+@media (max-width: 850px) {
+  .page-map {
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .profile.driver-view {
+    display: block;
+    max-height: none;
+    height: auto;
+  } 
+
+  .map-container.driver-view {
+    width: 100%;
+    height: 300px;
+  }
+
+  .driver-container.driver-view {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+}
+
+
+
+
+
+
+
+/*=============================================
+=             Radar Loader by iGadget         =
+=============================================*/
+
+[class*='loader'] {
+  position: relative;
+  top: 40%;
+  display: inline-block;
+  margin: 0 auto; 
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.loader-radar {
+  width: 100px;
+  height: 100px;
+  top: 33%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(110, 81, 59, 0.2);
+  z-index: 1;
+  background-color: rgba(219,174,86, 0.2);
+  background-image: repeating-radial-gradient(transparent 0, transparent 9.75px, rgba(219,174,86, 0.5) 11.25px, rgba(219,174,86, 0.5) 12.5px);
+}
+/* .loader-radar {
+  background-image: repeating-radial-gradient(transparent 0, transparent 3px, rgba(219,174,86, 0.5) 4px, rgba(219,174,86, 0.5) 5px), repeating-radial-gradient(transparent 0, transparent 3px, rgba(0, 0, 0, 0.25) 4px, rgba(0, 0, 0, 0.25) 5px);
+  background-position: 0px 0px, 1px 1px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25), inset 6.25px 6.25px 6.25px rgba(0, 0, 0, 0.25);
+} */
+.loader-radar:before, .loader-radar:after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+.loader-radar:before {
+  z-index: 0;
+  width: 56.25px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  border-left: 0.1em solid #6E513B;
+  background-image: linear-gradient(to right, rgba(110, 81, 59, 0.3) 0%, transparent 85%);
+  -webkit-animation: radar 2s infinite linear;
+          animation: radar 2s infinite linear;
+}
+.loader-radar:after {
+  left: 62%;
+  top: 34%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #6E513B;
+  -webkit-animation: radarDotGlow 2s infinite linear, radarDotMove 15s infinite cubic-bezier(0.5, -0.35, 0.5, 1.35);
+          animation: radarDotGlow 2s infinite linear, radarDotMove 15s infinite cubic-bezier(0.5, -0.35, 0.5, 1.35);
+}
+
+@-webkit-keyframes radar {
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes radar {
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes radarDotGlow {
+  0%, 59.9%, 87%, 100% {
+    color: rgba(240,73,69, 0.33);
+    box-shadow: 0 0 .1em .05em currentColor;
+  }
+  62% {
+    color: #F04945;
+    box-shadow: 0 0 .1em .1em currentColor;
+  }
+}
+@keyframes radarDotGlow {
+  0%, 59.9%, 87%, 100% {
+    color: rgba(240,73,69, 0.33);
+    box-shadow: 0 0 .1em .05em currentColor;
+  }
+  62% {
+    color: #F04945;
+    box-shadow: 0 0 .1em .1em currentColor;
+  }
+}
+@-webkit-keyframes radarDotMove {
+  0% {
+    top: 0%;
+    left: 85%;
+  }
+  40% {
+    top: 30%;
+    left: 70%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
+@keyframes radarDotMove {
+  0% {
+    top: 0%;
+    left: 85%;
+  }
+  40% {
+    top: 30%;
+    left: 70%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.loader:focus {
+  outline: 0;
+}
+.loader, .loader:before, .loader:after {
+  box-sizing: border-box;
+}

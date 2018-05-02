@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Goober</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ScrollReveal.js -->
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+  window.sr = ScrollReveal();
+
+  // Add class to <html> if ScrollReveal is supported
+  // Note: this method is deprecated, and only works in version 3
+  if (sr.isSupported()) {
+    document.documentElement.classList.add('sr');
+  }
+</script>
+<style>
+  /* Ensure elements load hidden before ScrollReveal runs */
+
+  .sr .fooReveal {
+    visibility: hidden;
+  }
+</style>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+  crossorigin="anonymous">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+  crossorigin="anonymous"></script>
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="css/style.css">
+
+
+<div class="sideways">
+  <div class="pages">
+
+    <section class="page intro sw-scroll">
+      <div class="logo">GOOBER</div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md intro-col">
+            <div class="intro-text">
+
+              <div class="intro-ride">
+                <div class="img-container">
+                  <img src="barn.svg" alt="An image of a barn" class="img-fluid">
+                </div>
+                <div class="text-container">
+                  <p id="getride">Need a ride?</p>
+                  <button id="ride" type="button">Git ther
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="bg-line">
+                <small>OR</small>
+              </div>
+              <div class="intro-ride">
+                <div class="img-container">
+                  <img src="tractor.svg" alt="An image of a tractor" class="img-fluid">
+                </div>
+                <div class="text-container">
+                  <p id="getride">Drive others</p>
+                </div>
+              </div>
+              <form>
+                <input type="text" name="fullName" placeholder="Full Name">
+                <input type="email" name="email" placeholder="Email">
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Tractor:</label>
+                  <select name="tractor">
+                    <option>John Deere</option>
+                    <option>CaseIH</option>
+                    <option>Allis Chalmers</option>
+                    <option>New Holland</option>
+                  </select>
+                </div>
+                <button id="drive" class="btn-block" type="button">Drive</button>
+              </form>
+
+            </div>
+          </div>
+          <div class="col-md-7 intro-col">
+            <img src="hayride.svg" alt="An image of a hayride" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <a id="copyright" href="https://www.vecteezy.com">Vector Illustration by vecteezy.com</a>
+    </section>
+
+    <section class="page loading">
+      <div class="loading-container">
+        <h4>Finding drivers near you...</h4>
+        <div class="loader-radar"></div>
+      </div>
+    </section>
+
+    <section class="page page-map sw-scroll">
+      <h4 id="title">Click driver to learn more</h4>
+      <div class="profile">
+        <div class="map-container">
+          <div id="map"></div>
+        </div>
+        <div class="driver-container">
+          <p class="name"></p>
+          <p class="tractor"></p>
+          <p class="distance"></p>
+          <button id="ready" class="btn-block" type="button">Git somewher</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+  crossorigin="anonymous"></script>
+
+<!-- 
+            You need to include this script tag on any page that has a Google Map.
+
+            The following script tag will work when opening this example locally on your computer.
+            But if you use this on a localhost server or a live website you will need to include an API key. 
+            Sign up for one here (it's free for small usage): 
+                https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+            After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
+                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>
+        -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script src="sideways.min.js"></script>
+<script src="index.js"></script>

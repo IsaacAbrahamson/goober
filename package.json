@@ -1,0 +1,28 @@
+{
+  "name": "muber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "set NODE_ENV=test&& nodemon --exec mocha --recursive",
+    "test2": "set NODE_ENV=test&& nodemon --exec mocha --recursive -R min",
+    "start": "nodemon index.js",
+    "seed": "node seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "mocha": "^4.0.1",
+    "mongoose": "^4.12.3",
+    "morgan": "^1.9.0",
+    "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.1.2",
+    "nodemon": "^1.12.1",
+    "random-name": "^0.1.2"
+  }
+}
